@@ -84,7 +84,7 @@ final class Sftp extends SshBase
             throw new RuntimeException('Could not download a file. ' . self::ERROR_NOT_CONNECTED);
         }
 
-        return $this->sftp->get($localFilePath, $remoteFilePath);
+        return $this->sftp->get($remoteFilePath, $localFilePath);
     }
 
     /**
