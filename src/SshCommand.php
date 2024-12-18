@@ -107,4 +107,12 @@ final class SshCommand
     {
         return $this->exitStatus;
     }
+
+    /**
+     * Check if the exit status of the command matches the given status.
+     */
+    public function isExitStatus(int|false $status): bool
+    {
+        return $this->exitStatus === $status;
+    }
 }
